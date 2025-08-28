@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Smart MA.VI Manager
+GenericName=School Management System
+Comment=School Management System for Shree MA.VI Imilya
+Exec=SmartMAVIManager
+Icon=smart-mavi-manager
+Terminal=false
+Categories=Education;Office;
+Keywords=school;management;education;attendance;students;teachers;
+StartupWMClass=SmartMAVIManager
+

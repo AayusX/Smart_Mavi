@@ -1,0 +1,4 @@
+0a643b1e4fa5f0e45070d14727e13941  usr/bin/SmartMAVIManager
+d9c9baceac3d847d486170bceea1e957  usr/share/applications/smart-mavi-manager.desktop
+bafaee4181db2117eac8b617a5a3b0bb  usr/share/icons/hicolor/256x256/apps/smart-mavi-manager.png
+63f2f24135803f72271bed38669ca790  usr/share/smart-mavi-manager/init_database.sql

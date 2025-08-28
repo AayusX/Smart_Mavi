@@ -1,0 +1,4 @@
+/usr/bin/SmartMAVIManager
+/usr/share/applications/smart-mavi-manager.desktop
+/usr/share/icons/hicolor/256x256/apps/smart-mavi-manager.png
+/usr/share/smart-mavi-manager/init_database.sql

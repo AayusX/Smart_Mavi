@@ -1,0 +1,10 @@
+/home/aayusx/S M.V M/build/CMakeFiles/SmartMAVIManager.dir
+/home/aayusx/S M.V M/build/CMakeFiles/package.dir
+/home/aayusx/S M.V M/build/CMakeFiles/package_source.dir
+/home/aayusx/S M.V M/build/CMakeFiles/edit_cache.dir
+/home/aayusx/S M.V M/build/CMakeFiles/rebuild_cache.dir
+/home/aayusx/S M.V M/build/CMakeFiles/list_install_components.dir
+/home/aayusx/S M.V M/build/CMakeFiles/install.dir
+/home/aayusx/S M.V M/build/CMakeFiles/install/local.dir
+/home/aayusx/S M.V M/build/CMakeFiles/install/strip.dir
+/home/aayusx/S M.V M/build/CMakeFiles/SmartMAVIManager_autogen.dir

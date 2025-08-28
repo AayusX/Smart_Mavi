@@ -1,0 +1,25 @@
+{
+	"BUILD_DIR" : "/home/aayusx/S M.V M/build/SmartMAVIManager_autogen",
+	"CMAKE_BINARY_DIR" : "/home/aayusx/S M.V M/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/aayusx/S M.V M/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/aayusx/S M.V M",
+	"CMAKE_SOURCE_DIR" : "/home/aayusx/S M.V M",
+	"INCLUDE_DIR" : "/home/aayusx/S M.V M/build/SmartMAVIManager_autogen/include",
+	"INPUTS" : 
+	[
+		"/home/aayusx/S M.V M/resources/logo.svg",
+		"/home/aayusx/S M.V M/resources/logo.png",
+		"/home/aayusx/S M.V M/data/init_database.sql",
+		"/home/aayusx/S M.V M/resources/styles/light.qss"
+	],
+	"LOCK_FILE" : "/home/aayusx/S M.V M/build/CMakeFiles/SmartMAVIManager_autogen.dir/AutoRcc_resources_3YJK5W5UP7_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "resources" ],
+	"OUTPUT_CHECKSUM" : "3YJK5W5UP7",
+	"OUTPUT_NAME" : "qrc_resources.cpp",
+	"RCC_EXECUTABLE" : "/usr/lib/qt6/libexec/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/home/aayusx/S M.V M/build/CMakeFiles/SmartMAVIManager_autogen.dir/AutoRcc_resources_3YJK5W5UP7_Used.txt",
+	"SOURCE" : "/home/aayusx/S M.V M/resources/resources.qrc",
+	"VERBOSITY" : 0
+}

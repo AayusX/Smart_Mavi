@@ -1,0 +1,11 @@
+Architecture: amd64
+Depends: libqt6core6, libqt6widgets6, libqt6sql6, libqt6network6, libqt6charts6
+Description: Smart MA.VI Manager - School Management System for Shree MA.VI Imilya
+Maintainer: Tech07
+Package: smart-mavi-manager
+Priority: optional
+Recommends: sqlite3
+Section: Education
+Version: 1.0.0
+Installed-Size: 1027
+
