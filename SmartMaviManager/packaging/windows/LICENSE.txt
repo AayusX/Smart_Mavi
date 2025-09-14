@@ -1,0 +1,32 @@
+Smart Mavi Manager - License Agreement
+
+© 2025 Smart Mavi Solutions
+
+PROFESSIONAL SCHEDULE GENERATOR SOFTWARE LICENSE
+
+This software is provided under the following terms:
+
+1. GRANT OF LICENSE
+Smart Mavi Solutions grants you a non-exclusive license to use Smart Mavi Manager for educational scheduling purposes.
+
+2. PERMITTED USES
+- Install and use the software on educational institution computers
+- Generate and export schedules for your institution
+- Create backup copies for archival purposes
+
+3. RESTRICTIONS
+- Do not redistribute or sell this software
+- Do not reverse engineer or modify the software
+- Do not remove copyright notices
+
+4. DISCLAIMER
+This software is provided "as is" without warranty of any kind. Smart Mavi Solutions shall not be liable for any damages arising from the use of this software.
+
+5. SUPPORT
+For technical support and updates, visit: https://smartmavi.com
+
+By installing this software, you agree to these terms.
+
+Smart Mavi Solutions
+Professional Educational Software
+2025

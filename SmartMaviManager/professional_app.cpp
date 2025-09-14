@@ -56,8 +56,7 @@ private:
     std::vector<Teacher> teachers;
     std::vector<Subject> subjects;
     std::vector<Class> classes;
-    // Add Sunday, keep Saturday as holy day (no lessons)
-    std::vector<std::string> days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
+    std::vector<std::string> days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday"};
     std::vector<std::string> timeSlots = {
         "08:00-08:45", "08:45-09:30", "09:30-10:15", "10:30-11:15",
         "11:15-12:00", "12:00-12:45", "13:45-14:30", "14:30-15:15"
@@ -211,6 +210,7 @@ private:
         for (int i = 0; i < numSubjects; i++) {
             std::cout << "Enter subject " << (i + 1) << " name: ";
             std::string subjectName;
+            std::getline(std::cin, subjectName);
             
             if (!subjectName.empty()) {
                 Subject subject;
@@ -304,57 +304,72 @@ private:
     }
     
     void addSampleTeachers() {
-        static const std::vector<std::string> firstNames = {
-            "Alex", "Jordan", "Taylor", "Morgan", "Casey", "Riley", "Jamie", "Drew", "Robin", "Avery"
+        std::vector<std::string> sampleNames = {
+            "Dr. Sarah Johnson", "Mr. Michael Brown", "Ms. Emily Davis", 
+            "Prof. David Wilson", "Mrs. Lisa Anderson", "Mr. James Taylor"
         };
-        static const std::vector<std::string> lastNames = {
-            "Smith", "Johnson", "Lee", "Brown", "Garcia", "Martinez", "Davis", "Clark", "Lewis", "Walker"
-        };
-        std::uniform_int_distribution<int> distFirst(0, firstNames.size() - 1);
-        std::uniform_int_distribution<int> distLast(0, lastNames.size() - 1);
-
-        int numTeachers = 6 + rng() % 5; // 6-10 teachers
-        teachers.clear();
-        for (int i = 0; i < numTeachers; ++i) {
-            std::string name = firstNames[distFirst(rng)] + " " + lastNames[distLast(rng)];
-            teachers.push_back({name, {}, i + 1});
+        
+        for (size_t i = 0; i < sampleNames.size(); ++i) {
+            Teacher teacher;
+            teacher.name = sampleNames[i];
+            teacher.id = i + 1;
+            teachers.push_back(teacher);
+            std::cout << GREEN << "   ✓ " << teacher.name << RESET << "\n";
         }
     }
     
     void addSampleSubjects() {
-        static const std::vector<std::string> baseSubjects = {
-            "Math", "English", "Science", "History", "Geography", "Physics", "Chemistry", "Biology", "Art", "Music"
+        std::vector<std::string> sampleSubjects = {
+            "Mathematics", "English", "Science", "History", 
+            "Geography", "Physics", "Chemistry", "Biology", "Art", "Music"
         };
-        int numSubjects = 5 + rng() % 6; // 5-10 subjects
-        subjects.clear();
-        std::vector<std::string> shuffledSubjects = baseSubjects; // Make a mutable copy
-        std::shuffle(shuffledSubjects.begin(), shuffledSubjects.end(), rng);
-        for (int i = 0; i < numSubjects; ++i) {
-            subjects.push_back({shuffledSubjects[i], i + 1});
+        
+        for (size_t i = 0; i < sampleSubjects.size(); ++i) {
+            Subject subject;
+            subject.name = sampleSubjects[i];
+            subject.id = i + 1;
+            subjects.push_back(subject);
+            std::cout << GREEN << "   ✓ " << subject.name << RESET << "\n";
         }
     }
     
     void addSampleClasses() {
-        int numClasses = 4 + rng() % 4; // 4-7 classes
-        classes.clear();
-        for (int i = 0; i < numClasses; ++i) {
-            std::string className = "Class " + std::to_string(9 + (i / 2)) + char('A' + (i % 2));
-            std::string grade = "Grade " + std::to_string(9 + (i / 2));
-            classes.push_back({className, grade, i + 1});
+        std::vector<std::pair<std::string, std::string>> sampleClasses = {
+            {"Class 9A", "Grade 9"}, {"Class 9B", "Grade 9"},
+            {"Class 10A", "Grade 10"}, {"Class 10B", "Grade 10"},
+            {"Class 11A", "Grade 11"}, {"Class 12A", "Grade 12"}
+        };
+        
+        for (size_t i = 0; i < sampleClasses.size(); ++i) {
+            Class cls;
+            cls.name = sampleClasses[i].first;
+            cls.grade = sampleClasses[i].second;
+            cls.id = i + 1;
+            classes.push_back(cls);
+            std::cout << GREEN << "   ✓ " << cls.name << " (" << cls.grade << ")" << RESET << "\n";
         }
     }
     
     void autoAssignSubjects() {
-        if (teachers.empty() || subjects.empty()) return;
-        std::uniform_int_distribution<int> distSubjects(1, std::min(3, (int)subjects.size()));
+        // Assign subjects to teachers intelligently
+        std::map<std::string, std::vector<std::string>> teacherSubjectMap = {
+            {"Dr. Sarah Johnson", {"Mathematics", "Physics"}},
+            {"Mr. Michael Brown", {"English", "History"}},
+            {"Ms. Emily Davis", {"Science", "Biology", "Chemistry"}},
+            {"Prof. David Wilson", {"Geography", "History"}},
+            {"Mrs. Lisa Anderson", {"Art", "Music"}},
+            {"Mr. James Taylor", {"Mathematics", "Science"}}
+        };
+        
         for (auto& teacher : teachers) {
-            teacher.subjects.clear();
-            int num = distSubjects(rng);
-            std::vector<int> idx(subjects.size());
-            std::iota(idx.begin(), idx.end(), 0);
-            std::shuffle(idx.begin(), idx.end(), rng);
-            for (int j = 0; j < num; ++j) {
-                teacher.subjects.push_back(subjects[idx[j]].name);
+            if (teacherSubjectMap.find(teacher.name) != teacherSubjectMap.end()) {
+                teacher.subjects = teacherSubjectMap[teacher.name];
+                std::cout << GREEN << "   ✓ " << teacher.name << " → ";
+                for (size_t i = 0; i < teacher.subjects.size(); ++i) {
+                    std::cout << teacher.subjects[i];
+                    if (i < teacher.subjects.size() - 1) std::cout << ", ";
+                }
+                std::cout << RESET << "\n";
             }
         }
     }
@@ -453,7 +468,7 @@ private:
             
             std::cout << GREEN << "[1]" << WHITE << " Add New Subject\n" << RESET;
             std::cout << GREEN << "[2]" << WHITE << " Remove Subject\n" << RESET;
-            std::cout << RED << "[0]" << WHITE << " Back to Main Menu\n" << RESET;
+            std::cout << RED << "[0]" << WHITE << " Back to Main Menu\n\n" << RESET;
             
             std::cout << BOLD << "Select option: " << RESET;
             int choice = getChoice(0, 2);
@@ -467,26 +482,19 @@ private:
     }
     
     void addSubject() {
+        std::cout << "\n" << BOLD << "📝 Add New Subject" << RESET << "\n";
+        std::cout << "Enter subject name: ";
         std::string name;
-        int attempts = 0;
-        while (true) {
-            std::cout << "Enter subject name: ";
-            std::getline(std::cin, name);
-            // Trim whitespace
-            name.erase(0, name.find_first_not_of(" \t"));
-            name.erase(name.find_last_not_of(" \t") + 1);
-            if (!name.empty()) {
-                break;
-            }
-            std::cout << RED << "Please enter a valid subject name." << RESET << std::endl;
-            attempts++;
-            if (attempts > 5) {
-                std::cout << RED << "Too many invalid attempts. Cancelling subject entry." << RESET << std::endl;
-                return;
-            }
+        std::getline(std::cin, name);
+        
+        if (!name.empty()) {
+            Subject subject;
+            subject.name = name;
+            subject.id = subjects.size() + 1;
+            subjects.push_back(subject);
+            
+            std::cout << GREEN << "✅ Subject '" << name << "' added successfully!" << RESET << "\n";
         }
-        subjects.push_back({name, (int)subjects.size() + 1});
-        std::cout << GREEN << "Subject added successfully!" << RESET << std::endl;
         waitForEnter();
     }
     
@@ -529,7 +537,7 @@ private:
             
             std::cout << GREEN << "[1]" << WHITE << " Add New Class\n" << RESET;
             std::cout << GREEN << "[2]" << WHITE << " Remove Class\n" << RESET;
-            std::cout << RED << "[0]" << WHITE << " Back to Main Menu\n" << RESET;
+            std::cout << RED << "[0]" << WHITE << " Back to Main Menu\n\n" << RESET;
             
             std::cout << BOLD << "Select option: " << RESET;
             int choice = getChoice(0, 2);
@@ -700,9 +708,6 @@ private:
         
         for (const auto& cls : classes) {
             for (const auto& day : days) {
-                // Saturday is holy day: no lessons
-                if (day == "Saturday") continue;
-
                 std::vector<std::string> dayTimes = timeSlots;
                 std::shuffle(dayTimes.begin(), dayTimes.end(), rng);
                 
@@ -746,11 +751,6 @@ private:
             for (const auto& day : days) {
                 std::cout << BOLD << std::setw(12) << std::left << day << RESET << ": ";
                 
-                if (day == "Saturday") {
-                    std::cout << RED << "🕌 Holy day (No lessons)" << RESET << "\n";
-                    continue;
-                }
-
                 std::vector<ScheduleEntry> daySchedule;
                 for (const auto& entry : schedule) {
                     if (entry.className == cls.name && entry.day == day) {
@@ -769,7 +769,7 @@ private:
                              << YELLOW << daySchedule[i].subject << RESET << " " 
                              << DIM << "(" << daySchedule[i].teacher << ")" << RESET << "\n";
                 }
-                if (daySchedule.empty() && day != "Saturday") {
+                if (daySchedule.empty()) {
                     std::cout << DIM << "🌴 Free day\n" << RESET;
                 }
             }
@@ -793,11 +793,6 @@ private:
                 for (const auto& day : days) {
                     file << std::setw(12) << std::left << day << ": ";
                     
-                    if (day == "Saturday") {
-                        file << "Holy day (No lessons)\n";
-                        continue;
-                    }
-
                     std::vector<ScheduleEntry> daySchedule;
                     for (const auto& entry : schedule) {
                         if (entry.className == cls.name && entry.day == day) {
@@ -816,7 +811,7 @@ private:
                              << daySchedule[i].subject << " (" 
                              << daySchedule[i].teacher << ")\n";
                     }
-                    if (daySchedule.empty() && day != "Saturday") {
+                    if (daySchedule.empty()) {
                         file << "Free day\n";
                     }
                 }

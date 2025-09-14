@@ -1,0 +1,22 @@
+Package: smart-mavi-manager
+Version: 2.0.0
+Section: education
+Priority: optional
+Architecture: amd64
+Depends: libqt5core5a, libqt5gui5, libqt5widgets5, libqt5printsupport5, libc6, libgcc-s1, libstdc++6
+Maintainer: Smart Mavi Solutions <support@smartmavi.com>
+Description: Professional Schedule Generator for Educational Institutions
+ Smart Mavi Manager is an intelligent scheduling application that creates
+ optimized, randomized schedules for educational institutions.
+ .
+ Features:
+  * Middle Eastern schedule format (Sunday-Friday, Saturday holiday)
+  * 4 periods before lunch, 3 periods after lunch
+  * Advanced randomization algorithms
+  * Beautiful Qt5-based graphical interface
+  * Professional PDF export functionality
+  * Multiple interface options (GUI, Console, CLI)
+  * Smart teacher and subject management
+  * Class scheduling with grade levels
+  * Real-time schedule generation
+Homepage: https://smartmavi.com

@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Smart Mavi Manager
+GenericName=Schedule Generator
+Comment=Professional Schedule Generator for Educational Institutions
+Icon=smart-mavi-manager
+Exec=smart-mavi-manager
+Terminal=false
+StartupNotify=true
+Categories=Education;Office;
+Keywords=schedule;timetable;education;school;teacher;class;
+MimeType=application/x-smartmavi-schedule;
