@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Bhandari Hardware & Suppliers</title>
+    
+<script src="https://cdn.tailwindcss.com"></script>
+    
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        main {
+            flex-grow: 1;
+        }
+        /* Custom scrollbar for better aesthetic */
+        .cart-list::-webkit-scrollbar, .order-list::-webkit-scrollbar {
+            width: 6px;
+        }
+        .cart-list::-webkit-scrollbar-thumb, .order-list::-webkit-scrollbar-thumb {
+            background: #d1d5db; /* gray-300 */
+            border-radius: 3px;
+        }
+        /* Ensure the product image is contained within its space */
+        .product-image-container {
+            aspect-ratio: 4/3; /* Forces a fixed aspect ratio for all images */
+            overflow: hidden;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bhandari-primary': '#4f46e5', // Indigo-600
+                        'bhandari-accent': '#f97316',  // Orange-500
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    
+<header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                
+<div class="flex-shrink-0">
+                    <button onclick="renderPage('home')" class="text-2xl font-bold tracking-tight text-bhandari-primary hover:text-indigo-800 transition duration-150">
+                        New Bhandari <span class="text-bhandari-accent">Hardware</span>
+                    </button>
+                </div>
+
+                
+<nav class="hidden md:flex space-x-6">
+                    <button onclick="renderPage('home')" class="nav-link text-gray-600 hover:text-bhandari-primary px-3 py-2 rounded-md text-sm font-medium transition duration-150" data-page="home">Home</button>
+                    <button onclick="renderPage('products')" class="nav-link text-gray-600 hover:text-bhandari-primary px-3 py-2 rounded-md text-sm font-medium transition duration-150" data-page="products">Products</button>
+                    <a href="#contact" class="text-gray-600 hover:text-bhandari-primary px-3 py-2 rounded-md text-sm font-medium transition duration-150">Contact</a>
+                </nav>
+
+                
+<div class="flex items-center">
+                    <button onclick="renderPage('cart')" id="cart-button" class="relative p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition duration-150 focus:outline-none focus:ring-2 focus:ring-bhandari-primary">
+                        
+<svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        <span id="cart-count" class="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white transform translate-x-1/2 -translate-y-1/2 bg-bhandari-accent rounded-full min-w-[1.25rem] h-5">0</span>
+                    </button>
+
+                    
+<button id="menu-button" class="md:hidden ml-3 p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-bhandari-primary">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path><path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        
+<div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg border-t border-gray-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <button onclick="renderPage('home')" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-bhandari-primary w-full text-left" data-page="home">Home</button>
+                <button onclick="renderPage('products')" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-bhandari-primary w-full text-left" data-page="products">Products</button>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-bhandari-primary w-full text-left">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    
+<main id="app-container" class="max-w-7xl mx-auto py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
+        
+</main>
+
+    
+<footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+            
+<div>
+                <h4 class="text-lg font-semibold mb-4 text-bhandari-accent">New Bhandari</h4>
+                <p class="text-sm text-gray-400">Your partner in quality hardware and home accessories since 2005.</p>
+                <button onclick="renderPage('admin')" class="mt-4 text-xs font-medium text-gray-500 hover:text-white transition duration-150 underline">Admin Portal</button>
+            </div>
+            
+<div>
+                <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><button onclick="renderPage('products')" class="text-gray-400 hover:text-white transition duration-150">Products</button></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-150">Shipping & Returns</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-150">Privacy Policy</a></li>
+                </ul>
+            </div>
+            
+<div id="contact">
+                <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                <div class="flex items-center space-x-3 mb-4">
+                    
+<img src="uploaded:1000031039.jpg-6deb3879-6c1e-4136-b162-70e737d45926" 
+                         alt="Owner Photo - Bishal Bhandari" 
+                         class="w-24 h-24 rounded-full object-cover shadow-lg">
+                    
+                    <div>
+                        <p class="text-md text-gray-300">"Quality is our foundation."</p>
+                        <p class="text-sm font-semibold text-gray-200">Bishal Bhandari</p>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-400">Email: info@bhandarihardware.com</p>
+                <p class="text-sm text-gray-400 mb-3">Nepalgunj, Banke, Nepal</p>
+                
+                <div class="flex flex-wrap gap-3 mt-4">
+                    <a href="https://www.facebook.com/share/1BWhxyQT3b/" target="_blank" class="flex items-center justify-center p-2 rounded-full bg-blue-600 hover:bg-blue-700 transition duration-150 text-white shadow-md" aria-label="Facebook">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.505 1.492-3.89 3.776-3.89 1.094 0 2.24.195 2.24.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33V22C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                    </a>
+                    <a href="https://maps.app.goo.gl/931wXZqeTBNeGsXR6" target="_blank" class="flex items-center justify-center p-2 rounded-full bg-red-600 hover:bg-red-700 transition duration-150 text-white shadow-md" aria-label="Google Maps">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" clip-rule="evenodd" /></svg>
+                    </a>
+                    <a href="tel:+9779821569714" class="flex items-center justify-center px-4 py-2 rounded-full bg-green-500 hover:bg-green-600 transition duration-150 text-white shadow-md text-sm font-medium">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06L6.222 10.279a9.94 9.94 0 005.556 5.556l1.291-1.291a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.163 18 2 12.837 2 7V3z"></path></svg>
+                        Call Now
+                    </a>
+                </div>
+            </div>
+            
+<div>
+                <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+                <div class="flex space-x-3">
+                    <a href="https://www.facebook.com/share/1BWhxyQT3b/" target="_blank" class="text-gray-400 hover:text-bhandari-accent transition duration-150">Facebook</a>
+                    <a href="#" class="text-gray-400 hover:text-bhandari-accent transition duration-150">IG</a>
+                    <a href="#" class="text-gray-400 hover:text-bhandari-accent transition duration-150">TW</a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-sm text-gray-500 mt-8 border-t border-gray-700 pt-4">
+            &copy; 2024 New Bhandari Hardware and Suppliers. All rights reserved.
+        </div>
+    </footer>
+
+    
+<div id="notification-box" class="fixed bottom-4 right-4 bg-green-500 text-white p-4 rounded-lg shadow-2xl transition-opacity duration-300 opacity-0 pointer-events-none z-50">
+        Item added to cart!
+    </div>
+
+    
+<script>
+        // --- ADMIN CONFIGURATION (Insecure: for demo purposes only) ---
+        const ADMIN_PASSWORD = "admin123";
+        const PRODUCTS_STORAGE_KEY = 'bhandariProducts';
+        const ORDERS_STORAGE_KEY = 'bhandariOrders';
+        const CART_STORAGE_KEY = 'bhandariCart';
+
+        // --- Initial Seed Product Data ---
+        const initialProductsData = [
+            { id: 1, name: "Stainless Steel Door Handle", category: "Hardware", price: 25.99, desc: "Durable and modern, perfect for any interior door.", color: '4f46e5', text: 'Door+Handle' },
+            { id: 2, name: "Premium Paint Brush Set", category: "Painting", price: 18.50, desc: "Professional painting and detailed home projects.", color: 'f97316', text: 'Brush+Set' },
+            { id: 3, name: "Rechargeable High-Power LED Work Light", category: "Lighting", price: 49.00, desc: "Essential illumination for dark workspaces or emergencies.", color: '10b981', text: 'Work+Light' },
+            { id: 4, name: "Heavy Duty Metal Tool Storage Box", category: "Storage", price: 65.99, desc: "Rugged construction with multi-level organization trays.", color: '6b7280', text: 'Tool+Box' },
+            { id: 5, name: "Digital Laser Measuring Tape (100m)", category: "Tools", price: 89.99, desc: "Fast and accurate digital measuring for all distances.", color: '3b82f6', text: 'Laser+Measure' },
+            { id: 6, name: "Heavy-Duty Safety Gloves (Pair)", category: "Safety", price: 12.49, desc: "Cut-resistant gloves for maximum hand protection.", color: 'ef4444', text: 'Safety+Gloves' },
+            { id: 7, name: "Cordless Drill/Driver Kit (18V)", category: "Power Tools", price: 129.99, desc: "Powerful drill with long-lasting lithium-ion battery.", color: '14b8a6', text: 'Cordless+Drill' },
+            { id: 8, name: "Galvanized Steel Nails (1kg Box)", category: "Hardware", price: 8.99, desc: "Standard 2-inch nails, highly resistant to rust.", color: '94a3b8', text: 'Nails' }
+        ];
+
+        // --- Global Elements ---
+        const appContainer = document.getElementById('app-container');
+        const cartCountElement = document.getElementById('cart-count');
+        const notificationBox = document.getElementById('notification-box');
+
+        // --- State Management ---
+        let productsData = [];
+        let cart = {};
+        let ordersHistory = []; // Stores completed orders for admin view
+
+        /**
+         * Shows a transient notification message.
+         * @param {string} message 
+         * @param {string} type 'success' or 'error'
+         */
+        function showNotification(message, type = 'success') {
+            const bgColor = type === 'success' ? 'bg-green-500' : 'bg-red-500';
+            const oldBgColor = type === 'success' ? 'bg-red-500' : 'bg-green-500';
+
+            notificationBox.textContent = message;
+            // Clean previous state and apply new styles
+            notificationBox.classList.remove('opacity-0', 'bg-green-500', 'bg-red-500', oldBgColor); 
+            notificationBox.classList.add('opacity-100', bgColor);
+
+            // Hide the notification after 3 seconds
+            setTimeout(() => {
+                notificationBox.classList.remove('opacity-100');
+                notificationBox.classList.add('opacity-0');
+            }, 3000);
+        }
+
+        // --- Data Persistence and Product CRUD ---
+
+        function getProductById(id) {
+            return productsData.find(p => p.id === id);
+        }
+
+        function getNextProductId() {
+            if (productsData.length === 0) return 1;
+            return Math.max(...productsData.map(p => p.id)) + 1;
+        }
+
+        function loadProducts() {
+            try {
+                const storedProducts = localStorage.getItem(PRODUCTS_STORAGE_KEY);
+                // If no stored data, use the initial seed data.
+                productsData = storedProducts ? JSON.parse(storedProducts) : initialProductsData;
+                // Ensure prices are numeric (important after admin edits)
+                productsData.forEach(p => p.price = parseFloat(p.price));
+            } catch (e) {
+                console.error("Error loading products from localStorage, using default:", e);
+                productsData = initialProductsData;
+            }
+        }
+
+        function saveProducts() {
+            localStorage.setItem(PRODUCTS_STORAGE_KEY, JSON.stringify(productsData));
+        }
+        
+        function loadCart() {
+            try {
+                const storedCart = localStorage.getItem(CART_STORAGE_KEY);
+                cart = storedCart ? JSON.parse(storedCart) : {};
+            } catch (e) {
+                console.error("Error loading cart from localStorage:", e);
+                cart = {};
+            }
+        }
+
+        function saveCart() {
+            localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
+            updateCartCount();
+        }
+
+        function loadOrderHistory() {
+             try {
+                const storedOrders = localStorage.getItem(ORDERS_STORAGE_KEY);
+                ordersHistory = storedOrders ? JSON.parse(storedOrders) : [];
+            } catch (e) {
+                console.error("Error loading order history from localStorage:", e);
+                ordersHistory = [];
+            }
+        }
+
+        function saveOrderHistory() {
+            localStorage.setItem(ORDERS_STORAGE_KEY, JSON.stringify(ordersHistory));
+        }
+
+        window.addProduct = function(newProduct) {
+            newProduct.id = getNextProductId();
+            newProduct.price = parseFloat(newProduct.price);
+            productsData.push(newProduct);
+            saveProducts();
+            showNotification(`Added new product: ${newProduct.name}`, 'success');
+            renderAdminDashboard(); // Refresh the view
+        }
+
+        window.updateProduct = function(id, updates) {
+            id = parseInt(id);
+            const index = productsData.findIndex(p => p.id === id);
+            if (index !== -1) {
+                // Apply updates, ensuring price is correctly parsed
+                productsData[index] = { 
+                    ...productsData[index], 
+                    ...updates, 
+                    price: parseFloat(updates.price) 
+                };
+                saveProducts();
+                showNotification(`Updated product: ${productsData[index].name}`, 'success');
+                // Re-render the dashboard and the products page if visible
+                if (currentPage === 'admin') renderAdminDashboard();
+                if (currentPage === 'products') renderProductsPage();
+            }
+        }
+
+        window.deleteProduct = function(id) {
+            id = parseInt(id);
+            const product = getProductById(id);
+            // Use a custom UI model instead of window.confirm in a real app
+            if (product && confirm(`Are you sure you want to delete ${product.name}? This action cannot be undone.`)) {
+                productsData = productsData.filter(p => p.id !== id);
+                saveProducts();
+                showNotification(`Deleted product: ${product.name}`, 'error');
+                // Also remove from cart if present
+                delete cart[id];
+                saveCart();
+                renderAdminDashboard(); // Refresh the view
+            }
+        }
+        
+        // --- Cart State and Actions (Unchanged) ---
+
+        function updateCartCount() {
+            let totalItems = 0;
+            for (const id in cart) {
+                totalItems += cart[id];
+            }
+            cartCountElement.textContent = totalItems > 99 ? '99+' : totalItems.toString();
+        }
+
+        window.addToCart = function(productId) {
+            productId = parseInt(productId);
+            const product = getProductById(productId);
+
+            if (!product) {
+                showNotification("Product not found (may have been deleted by admin)!", 'error');
+                return;
+            }
+
+            cart[productId] = (cart[productId] || 0) + 1;
+            saveCart();
+            showNotification(`${product.name} added to cart!`);
+        }
+
+        window.updateCartQuantity = function(productId, delta) {
+            productId = parseInt(productId);
+            const currentQty = cart[productId] || 0;
+            const newQty = currentQty + delta;
+
+            if (newQty <= 0) {
+                delete cart[productId];
+            } else {
+                cart[productId] = newQty;
+            }
+            saveCart();
+            if (document.getElementById('cart-page-content')) {
+                renderCartPage();
+            }
+        }
+
+        window.removeFromCart = function(productId) {
+            productId = parseInt(productId);
+            const product = getProductById(productId);
+            if (product) {
+                delete cart[productId];
+                saveCart();
+                showNotification(`${product.name} removed from cart.`, 'error');
+                renderCartPage();
+            }
+        }
+
+        window.clearCart = function() {
+            cart = {};
+            saveCart();
+        }
+        
+        // --- Checkout Logic (Shipping Cost Updated) ---
+        window.handleOrderSubmission = function(event) {
+            event.preventDefault(); 
+            
+            const form = event.target;
+            const name = form.querySelector('input[placeholder="Full Name"]').value;
+            const email = form.querySelector('input[placeholder="Email Address"]').value;
+            const address = form.querySelector('input[placeholder="Shipping Address"]').value;
+
+            const cartItems = Object.keys(cart).map(id => ({
+                product: getProductById(parseInt(id)),
+                quantity: cart[id]
+            })).filter(item => item.product && item.quantity > 0);
+
+            let subtotal = 0;
+            cartItems.forEach(item => subtotal += item.product.price * item.quantity);
+            const taxRate = 0.05;
+            // Shipping Logic: Free over $100, otherwise $1.80
+            const shipping = subtotal > 100 ? 0.00 : 1.80; 
+            const tax = subtotal * taxRate;
+            const total = subtotal + tax + shipping;
+
+            const newOrder = {
+                id: Date.now(),
+                date: new Date().toLocaleString(),
+                customer: { name, email, address },
+                items: cartItems.map(i => ({ id: i.product.id, name: i.product.name, qty: i.quantity, price: i.product.price })),
+                total: total.toFixed(2),
+                status: 'Pending'
+            };
+
+            ordersHistory.unshift(newOrder);
+            saveOrderHistory();
+            clearCart(); 
+
+            appContainer.innerHTML = `
+                <div class="text-center p-12 bg-white rounded-xl shadow-2xl border-4 border-bhandari-primary max-w-lg mx-auto mt-16">
+                    <svg class="w-16 h-16 text-bhandari-primary mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.01 12.01 0 003 12c0 2.75 1.15 5.25 3 7.07l.79.62A10 10 0 0012 22a10 10 0 005.81-2.31l.79-.62c1.85-1.82 3-4.32 3-7.07a12.01 12.01 0 00-.382-2.992z"></path></svg>
+                    <h3 class="text-2xl font-extrabold text-bhandari-primary mb-2">Order Placed Successfully!</h3>
+                    <p class="text-lg text-gray-700 mb-6">Thank you, <span class="font-semibold">${name}</span>!</p>
+                    <p class="text-gray-500 mb-8">Your order has been received and is being processed. Order ID: **${newOrder.id}**</p>
+                    <button onclick="renderPage('home')" class="px-6 py-3 text-base font-semibold rounded-full text-white bg-bhandari-accent hover:bg-orange-600 transition duration-150 shadow-md active:scale-95">
+                        Return to Home
+                    </button>
+                </div>
+            `;
+        }
+
+
+        // --- Page Rendering Functions (Updated Products and Admin) ---
+
+        function renderHomePage() {
+            appContainer.innerHTML = `
+                <section class="mb-16 bg-bhandari-primary rounded-xl shadow-xl overflow-hidden p-8 sm:p-16 text-center text-white">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight">
+                        Your Trusted Source for Home Making Essentials
+                    </h1>
+                    <p class="text-lg sm:text-xl opacity-90 mb-8">
+                        From durable hardware to elegant home accessories, we supply everything you need for your projects.
+                    </p>
+                    <button onclick="renderPage('products')" class="inline-block px-8 py-3 text-lg font-semibold rounded-full bg-bhandari-accent text-white shadow-lg transform transition duration-300 hover:scale-105 hover:bg-orange-600 active:scale-100">
+                        Explore Products
+                    </button>
+                </section>
+
+                <section class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center mt-12">
+                    <div class="p-6 bg-white rounded-xl shadow-lg border-t-4 border-bhandari-accent transition duration-300 hover:shadow-2xl">
+                        <svg class="w-10 h-10 text-bhandari-accent mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <h3 class="font-bold text-xl mb-2">Fast Delivery</h3>
+                        <p class="text-gray-600">Get your essentials delivered within 48 hours locally.</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-xl shadow-lg border-t-4 border-bhandari-accent transition duration-300 hover:shadow-2xl">
+                        <svg class="w-10 h-10 text-bhandari-accent mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.01 12.01 0 003 12c0 2.75 1.15 5.25 3 7.07l.79.62A10 10 0 0012 22a10 10 0 005.81-2.31l.79-.62c1.85-1.82 3-4.32 3-7.07a12.01 12.01 0 00-.382-2.992z"></path></svg>
+                        <h3 class="font-bold text-xl mb-2">Quality Guaranteed</h3>
+                        <p class="text-gray-600">We source only the highest quality materials for durability.</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-xl shadow-lg border-t-4 border-bhandari-accent transition duration-300 hover:shadow-2xl">
+                        <svg class="w-10 h-10 text-bhandari-accent mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        <h3 class="font-bold text-xl mb-2">Trade Pricing</h3>
+                        <p class="text-gray-600">Special discounts available for contractors and bulk buyers.</p>
+                    </div>
+                </section>
+            `;
+        }
+
+        function renderProductsPage() {
+            appContainer.innerHTML = `
+                <section class="pb-16">
+                    <h2 class="text-3xl font-bold text-center mb-6 text-bhandari-primary">Shop Our Catalogue</h2>
+                    
+                    
+<div class="mb-10 flex justify-center">
+                        <div class="relative w-full max-w-xl">
+                            <input type="text" id="search-input" onkeyup="handleSearch()" placeholder="Search hardware, tools, or accessories..."
+                                class="w-full py-3 pl-4 pr-12 border-2 border-gray-300 rounded-full focus:outline-none focus:border-bhandari-accent transition duration-150 shadow-sm text-lg">
+                            <svg class="absolute right-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </div>
+                    </div>
+
+                    <div id="product-list" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <p id="no-results" class="hidden text-center col-span-full text-lg text-gray-500">No products found matching your search criteria.</p>
+                    </div>
+                </section>
+            `;
+            // Call the function to populate the grid
+            renderProductGrid(productsData);
+        }
+
+        function renderProductGrid(products) {
+            const productListElement = document.getElementById('product-list');
+            const noResultsElement = document.getElementById('no-results');
+            productListElement.innerHTML = '';
+            
+            if (products.length === 0) {
+                noResultsElement.classList.remove('hidden');
+            } else {
+                noResultsElement.classList.add('hidden');
+                products.forEach(product => {
+                    productListElement.appendChild(createProductCard(product));
+                });
+            }
+        }
+
+        function createProductCard(product) {
+            const card = document.createElement('div');
+            card.className = 'bg-white rounded-xl shadow-lg transition duration-300 overflow-hidden flex flex-col hover:shadow-2xl hover:scale-[1.03] active:scale-[1.01] cursor-pointer';
+            
+            // Generate a default placeholder URL if the product object is missing color/text for image
+            const imageColor = product.color || '4f46e5';
+            const imageText = product.text || 'Item+Placeholder';
+            
+            card.innerHTML = `
+                
+<div class="product-image-container bg-gray-100 p-4 flex items-center justify-center border-b border-gray-200">
+                    <img src="https://placehold.co/400x300/${imageColor}/ffffff?text=${imageText}" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/400x300/4f46e5/ffffff?text=Placeholder';" 
+                         alt="${product.name}" class="w-full h-full object-contain rounded-lg">
+                </div>
+
+                <div class="p-4 flex flex-col flex-grow">
+                    <span class="text-xs font-semibold uppercase text-gray-500 mb-1 tracking-wider">${product.category}</span>
+                    <h3 class="text-xl font-bold mb-2 text-gray-900 flex-grow">${product.name}</h3>
+                    <p class="text-sm text-gray-500 mb-4 h-12 overflow-hidden">${product.desc}</p>
+                    
+                    
+<div class="flex justify-between items-center mt-auto pt-4 border-t border-gray-100">
+                        <span class="text-3xl font-extrabold text-bhandari-accent">$${product.price.toFixed(2)}</span>
+                        <button onclick="event.stopPropagation(); addToCart(${product.id})" class="px-3 py-2 text-sm font-medium rounded-lg text-white bg-bhandari-primary hover:bg-indigo-700 transition duration-150 shadow-md active:scale-95 flex items-center space-x-1">
+                            
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                            <span>Add</span>
+                        </button>
+                    </div>
+                </div>
+            `;
+            return card;
+        }
+
+        window.handleSearch = function() {
+            const query = document.getElementById('search-input').value.toLowerCase().trim();
+            
+            const filteredProducts = productsData.filter(product => 
+                product.name.toLowerCase().includes(query) || 
+                product.category.toLowerCase().includes(query) ||
+                product.desc.toLowerCase().includes(query)
+            );
+
+            renderProductGrid(filteredProducts);
+        }
+        
+        function renderCartPage() {
+            const cartItems = Object.keys(cart)
+                .map(id => ({
+                    product: getProductById(parseInt(id)),
+                    quantity: cart[id]
+                }))
+                .filter(item => item.product && item.quantity > 0);
+
+            let subtotal = 0;
+            cartItems.forEach(item => {
+                subtotal += item.product.price * item.quantity;
+            });
+
+            const taxRate = 0.05; 
+            const shipping = subtotal > 100 ? 0.00 : 1.80; // Shipping Logic
+            const tax = subtotal * taxRate;
+            const total = subtotal + tax + shipping;
+
+            let cartContent = '';
+
+            if (cartItems.length === 0) {
+                cartContent = `
+                    <div class="text-center p-12 bg-white rounded-xl shadow-lg">
+                        <svg class="w-16 h-16 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <h3 class="text-xl font-semibold text-gray-600 mb-2">Your Cart is Empty</h3>
+                        <p class="text-gray-500 mb-6">Looks like you haven't added anything to your cart yet.</p>
+                        <button onclick="renderPage('products')" class="px-6 py-3 text-base font-semibold rounded-lg text-white bg-bhandari-primary hover:bg-indigo-700 transition duration-150 shadow-md active:scale-95">
+                            Start Shopping
+                        </button>
+                    </div>
+                `;
+            } else {
+                const itemListHTML = cartItems.map(item => `
+                    <div class="flex items-center justify-between py-4 border-b last:border-b-0">
+                        
+<div class="flex items-center space-x-4 flex-grow min-w-0">
+                            <img src="https://placehold.co/80x80/${item.product.color || '4f46e5'}/ffffff?text=Item" 
+                                 onerror="this.onerror=null;this.src='https://placehold.co/80x80/4f46e5/ffffff?text=Item';" 
+                                 alt="${item.product.name}" class="w-16 h-16 object-cover rounded-lg hidden sm:block">
+                            <div class="flex-grow min-w-0">
+                                <h4 class="font-semibold text-gray-800 truncate">${item.product.name}</h4>
+                                <p class="text-sm text-gray-500">$${item.product.price.toFixed(2)}</p>
+                            </div>
+                        </div>
+
+                        
+<div class="flex items-center space-x-1 sm:space-x-2 mx-4">
+                            <button onclick="updateCartQuantity(${item.product.id}, -1)" class="p-1 sm:p-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition duration-150 active:scale-95">
+                                <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path></svg>
+                            </button>
+                            <span class="w-6 sm:w-8 text-center font-bold">${item.quantity}</span>
+                            <button onclick="updateCartQuantity(${item.product.id}, 1)" class="p-1 sm:p-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition duration-150 active:scale-95">
+                                <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                            </button>
+                        </div>
+
+                        
+<div class="w-20 sm:w-24 text-right ml-2 sm:ml-4 flex-shrink-0">
+                            <span class="font-bold text-bhandari-accent block">$${(item.product.price * item.quantity).toFixed(2)}</span>
+                            <button onclick="removeFromCart(${item.product.id})" class="text-xs text-red-500 hover:text-red-700 mt-1">Remove</button>
+                        </div>
+                    </div>
+                `).join('');
+
+                cartContent = `
+                    <div id="cart-page-content" class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                        
+<div class="lg:col-span-2 bg-white rounded-xl shadow-lg p-6">
+                            <h3 class="text-2xl font-bold mb-4 border-b pb-3">Shopping Cart (${cartItems.length} Items)</h3>
+                            <div class="cart-list max-h-[60vh] overflow-y-auto pr-2">
+                                ${itemListHTML}
+                            </div>
+                        </div>
+
+                        
+<div class="lg:col-span-1 bg-white rounded-xl shadow-lg p-6 h-fit sticky top-20">
+                            <h3 class="text-2xl font-bold mb-4 border-b pb-3">Order Summary</h3>
+                            
+                            <div class="space-y-2 text-gray-600 mb-6">
+                                <div class="flex justify-between">
+                                    <span>Subtotal:</span>
+                                    <span class="font-medium">$${subtotal.toFixed(2)}</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Shipping:</span>
+                                    <span class="font-medium text-green-600">${shipping === 0 ? 'FREE' : `$${shipping.toFixed(2)}`}</span>
+                                </div>
+                                <div class="flex justify-between border-b pb-2">
+                                    <span>Est. Tax (5%):</span>
+                                    <span class="font-medium">$${tax.toFixed(2)}</span>
+                                </div>
+                            </div>
+                            
+                            <div class="flex justify-between text-2xl font-extrabold text-bhandari-primary pt-2">
+                                <span>Order Total:</span>
+                                <span>$${total.toFixed(2)}</span>
+                            </div>
+
+                            <button onclick="renderPage('checkout')" class="w-full mt-6 py-3 text-lg font-semibold rounded-full text-white bg-bhandari-accent hover:bg-orange-600 transition duration-150 shadow-md active:scale-95">
+                                Proceed to Checkout
+                            </button>
+                            <button onclick="renderPage('products')" class="w-full mt-3 py-2 text-sm font-medium rounded-full text-bhandari-primary border border-bhandari-primary hover:bg-indigo-50 transition duration-150 active:scale-95">
+                                Continue Shopping
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }
+
+            appContainer.innerHTML = cartContent;
+        }
+
+        function renderCheckoutPage() {
+            let checkoutContent = '';
+            
+            const cartItems = Object.keys(cart).map(id => ({
+                product: getProductById(parseInt(id)),
+                quantity: cart[id]
+            })).filter(item => item.product && item.quantity > 0);
+
+            if (cartItems.length === 0) {
+                 checkoutContent = `
+                    <div class="text-center p-12 bg-white rounded-xl shadow-lg">
+                        <svg class="w-16 h-16 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <h3 class="text-xl font-semibold text-gray-600 mb-2">Nothing to Checkout</h3>
+                        <p class="text-gray-500 mb-6">Your cart is empty. Please add items before checking out.</p>
+                        <button onclick="renderPage('products')" class="px-6 py-3 text-base font-semibold rounded-lg text-white bg-bhandari-primary hover:bg-indigo-700 transition duration-150 shadow-md active:scale-95">
+                            Go to Products
+                        </button>
+                    </div>
+                `;
+            } else {
+                let subtotal = 0;
+                cartItems.forEach(item => subtotal += item.product.price * item.quantity);
+                const taxRate = 0.05;
+                const shipping = subtotal > 100 ? 0.00 : 1.80; // Shipping Logic
+                const tax = subtotal * taxRate;
+                const total = subtotal + tax + shipping;
+
+                checkoutContent = `
+                    <h2 class="text-3xl font-bold text-center mb-8 text-bhandari-primary">Secure Checkout</h2>
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                        
+                        
+<div class="lg:col-span-2 bg-white rounded-xl shadow-lg p-6">
+                            <h3 class="text-2xl font-bold mb-5 border-b pb-3">Shipping & Payment Details</h3>
+                            <form id="checkout-form" onsubmit="handleOrderSubmission(event)">
+                                <div class="space-y-4">
+                                    <h4 class="font-semibold text-lg text-bhandari-accent pt-2">Shipping Information</h4>
+                                    <input type="text" placeholder="Full Name" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-bhandari-primary focus:border-bhandari-primary focus:outline-none">
+                                    <input type="email" placeholder="Email Address" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-bhandari-primary focus:border-bhandari-primary focus:outline-none">
+                                    <input type="text" placeholder="Shipping Address" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-bhandari-primary focus:border-bhandari-primary focus:outline-none">
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                        <input type="text" placeholder="City" required class="p-3 border border-gray-300 rounded-lg focus:ring-bhandari-primary focus:border-bhandari-primary focus:outline-none">
+                                        <input type="text" placeholder="Zip/Postal Code" required class="p-3 border border-gray-300 rounded-lg focus:ring-bhandari-primary focus:border-bhandari-primary focus:outline-none">
+                                    </div>
+
+                                    <h4 class="font-semibold text-lg text-bhandari-accent pt-6 border-t mt-6">Payment Method (Simulation)</h4>
+                                    <div class="flex items-center space-x-3 p-3 bg-gray-100 rounded-lg hover:bg-gray-200 cursor-pointer transition duration-150">
+                                        <input type="radio" id="cash-on-delivery" name="payment" value="cod" checked class="text-bhandari-primary">
+                                        <label for="cash-on-delivery" class="font-medium cursor-pointer">Cash On Delivery (COD)</label>
+                                    </div>
+                                    <div class="flex items-center space-x-3 p-3 bg-gray-100 rounded-lg">
+                                        <input type="radio" id="card" name="payment" value="card" disabled class="text-gray-400">
+                                        <label for="card" class="text-gray-500">Credit Card (Currently Unavailable)</label>
+                                    </div>
+
+                                    <button type="submit" class="w-full py-3 text-lg font-semibold rounded-full text-white bg-bhandari-primary hover:bg-indigo-700 transition duration-150 shadow-xl mt-8 active:scale-95">
+                                        Place Order - $${total.toFixed(2)}
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+
+                        
+<div class="lg:col-span-1 bg-gray-50 rounded-xl shadow-inner p-6 h-fit sticky top-20 border border-gray-200">
+                            <h3 class="text-xl font-bold mb-4 text-bhandari-primary">Your Order</h3>
+                            <div class="space-y-3 cart-list max-h-60 overflow-y-auto pb-4 border-b">
+                                ${cartItems.map(item => `
+                                    <div class="flex justify-between items-center text-sm">
+                                        <span class="text-gray-600">${item.product.name} (x${item.quantity})</span>
+                                        <span class="font-medium">$${(item.product.price * item.quantity).toFixed(2)}</span>
+                                    </div>
+                                `).join('')}
+                            </div>
+                            
+                            <div class="space-y-2 text-gray-600 my-4">
+                                <div class="flex justify-between">
+                                    <span>Subtotal:</span>
+                                    <span class="font-medium">$${subtotal.toFixed(2)}</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Shipping:</span>
+                                    <span class="font-medium text-green-600">${shipping === 0 ? 'FREE' : `$${shipping.toFixed(2)}`}</span>
+                                </div>
+                                <div class="flex justify-between border-b pb-2">
+                                    <span>Tax:</span>
+                                    <span class="font-medium">$${tax.toFixed(2)}</span>
+                                </div>
+                            </div>
+
+                            <div class="flex justify-between text-xl font-extrabold text-bhandari-accent pt-2">
+                                <span>Grand Total:</span>
+                                <span>$${total.toFixed(2)}</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            appContainer.innerHTML = checkoutContent;
+        }
+
+        // --- Admin Functions ---
+
+        /** Renders the Admin Login Page */
+        function renderAdminLoginPage() {
+            appContainer.innerHTML = `
+                <div class="max-w-md mx-auto p-8 bg-white rounded-xl shadow-2xl mt-16">
+                    <h2 class="text-3xl font-bold text-center mb-6 text-bhandari-primary">Admin Login</h2>
+                    <p class="text-center text-sm text-gray-500 mb-8">
+                        Enter the administrator password to access the portal.
+                        <br>
+                        (Demo Password: <span class="font-mono font-semibold text-bhandari-accent">admin123</span>)
+                    </p>
+                    <form onsubmit="checkAdminLogin(event)">
+                        <input type="password" id="admin-password" placeholder="Password" required 
+                            class="w-full p-4 border border-gray-300 rounded-lg mb-4 focus:ring-bhandari-primary focus:border-bhandari-primary focus:outline-none text-lg">
+                        <button type="submit" class="w-full py-3 text-lg font-semibold rounded-full text-white bg-bhandari-accent hover:bg-orange-600 transition duration-150 shadow-md active:scale-95">
+                            Log In
+                        </button>
+                        <p id="login-error" class="text-red-500 mt-4 text-center hidden">Invalid password. Please try again.</p>
+                    </form>
+                </div>
+            `;
+        }
+
+        /** Checks the entered password against the hardcoded one */
+        window.checkAdminLogin = function(event) {
+            event.preventDefault();
+            const passwordInput = document.getElementById('admin-password');
+            const errorElement = document.getElementById('login-error');
+
+            if (passwordInput.value === ADMIN_PASSWORD) {
+                errorElement.classList.add('hidden');
+                // Password is correct, proceed to dashboard
+                renderAdminDashboard();
+                showNotification("Welcome Admin! Accessing data from local storage.", 'success');
+            } else {
+                // Password incorrect
+                passwordInput.value = '';
+                errorElement.classList.remove('hidden');
+                showNotification("Login Failed: Invalid password.", 'error');
+            }
+        }
+
+        /** Renders the Admin Dashboard with Orders and Product CRUD */
+        function renderAdminDashboard(activeTab = 'products') {
+            
+            const renderProductList = () => {
+                return productsData.map(product => `
+                    <li class="p-4 bg-white rounded-xl shadow-sm border border-gray-100 mb-3 flex flex-col md:flex-row justify-between items-start md:items-center">
+                        <div class="flex-grow min-w-0 mb-3 md:mb-0">
+                            <div class="font-bold text-lg text-gray-900 truncate">${product.name} <span class="text-xs font-medium text-bhandari-primary ml-1">(ID: ${product.id})</span></div>
+                            <div class="text-sm text-gray-600">${product.category} | <span class="font-semibold text-bhandari-accent">$${product.price.toFixed(2)}</span></div>
+                        </div>
+                        <div class="flex space-x-3 flex-shrink-0 w-full md:w-auto">
+                            <button onclick="renderEditProductForm(${product.id})" class="flex-1 px-3 py-2 text-sm font-semibold rounded-lg text-white bg-bhandari-primary hover:bg-indigo-700 transition duration-150 active:scale-95">
+                                Edit Price/Details
+                            </button>
+                            <button onclick="deleteProduct(${product.id})" class="flex-1 px-3 py-2 text-sm font-semibold rounded-lg text-white bg-red-500 hover:bg-red-600 transition duration-150 active:scale-95">
+                                Delete Product
+                            </button>
+                        </div>
+                    </li>
+                `).join('');
+            };
+
+            const orderListHTML = ordersHistory.length > 0 ? ordersHistory.map(order => `
+                <div class="p-4 border-b last:border-b-0 bg-white rounded-xl shadow-sm mb-3">
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold text-lg text-bhandari-primary">Order ID: ${order.id}</span>
+                        <span class="text-xs font-semibold text-white bg-green-500 px-3 py-1 rounded-full">${order.status}</span>
+                    </div>
+                    <p class="text-sm text-gray-600">Customer: ${order.customer.name} | Date: ${order.date}</p>
+                    <p class="text-lg font-extrabold text-bhandari-accent mt-2">Total: $${order.total}</p>
+                    <div class="mt-2 pt-2 border-t border-gray-100 text-xs text-gray-500">
+                        Items: ${order.items.map(i => `${i.name} (x${i.qty})`).join(', ')}
+                    </div>
+                </div>
+            `).join('') : '<p class="text-center text-gray-500 py-8">No orders have been placed yet.</p>';
+
+            const tabs = `
+                <div class="flex mb-8 border-b border-gray-200">
+                    <button onclick="renderAdminDashboard('products')" class="px-6 py-3 text-lg font-semibold border-b-4 ${activeTab === 'products' ? 'border-bhandari-accent text-bhandari-accent' : 'border-transparent text-gray-500 hover:text-bhandari-primary'}" data-tab="products">
+                        Product Management
+                    </button>
+                    <button onclick="renderAdminDashboard('orders')" class="px-6 py-3 text-lg font-semibold border-b-4 ${activeTab === 'orders' ? 'border-bhandari-accent text-bhandari-accent' : 'border-transparent text-gray-500 hover:text-bhandari-primary'}" data-tab="orders">
+                        Order History (${ordersHistory.length})
+                    </button>
+                </div>
+            `;
+
+            let contentHTML = '';
+
+            if (activeTab === 'products') {
+                contentHTML = `
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                        
+<div id="product-form-container" class="lg:col-span-1 bg-white rounded-xl shadow-2xl p-6 h-fit sticky top-20 border border-bhandari-accent/50">
+                            ${renderAddProductForm()}
+                        </div>
+
+                        
+<div class="lg:col-span-2">
+                            <h3 class="text-2xl font-bold mb-4 border-b pb-3 text-bhandari-primary">Manage Inventory (Edit/Delete Products)</h3>
+                            <ul class="order-list max-h-[70vh] overflow-y-auto pr-2">
+                                ${renderProductList()}
+                            </ul>
+                        </div>
+                    </div>
+                `;
+            } else if (activeTab === 'orders') {
+                 contentHTML = `
+                    <div class="lg:col-span-2">
+                        <h3 class="text-2xl font-bold mb-4 border-b pb-3 text-bhandari-primary">Past Customer Orders</h3>
+                        <div class="order-list max-h-[70vh] overflow-y-auto pr-2">
+                            ${orderListHTML}
+                        </div>
+                    </div>
+                `;
+            }
+
+            appContainer.innerHTML = `
+                <div class="max-w-full mx-auto">
+                    <h2 class="text-3xl font-bold text-center mb-4 text-bhandari-primary">Admin Dashboard</h2>
+                    <p class="text-center text-gray-500 mb-8">Manage inventory and view transactions.</p>
+                    
+                    ${tabs}
+                    
+                    ${contentHTML}
+
+                    <button onclick="renderPage('home')" class="block mx-auto mt-8 px-6 py-3 text-sm font-medium rounded-full text-gray-700 bg-gray-100 hover:bg-gray-200 transition duration-150 active:scale-95">
+                        Log Out / Return to Store
+                    </button>
+                </div>
+            `;
+        }
+        
+        // --- Product Form Management ---
+
+        function renderAddProductForm() {
+            return `
+                <h3 class="text-xl font-bold mb-5 text-bhandari-accent">Add New Product to Inventory</h3>
+                <form onsubmit="handleProductSubmit(event, 'add')">
+                    <div class="space-y-4">
+                        <input type="text" name="name" placeholder="Product Name (e.g., Hammer)" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-bhandari-primary focus:border-bhandari-primary">
+                        <input type="text" name="category" placeholder="Category (e.g., Tools)" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-bhandari-primary focus:border-bhandari-primary">
+                        <input type="number" name="price" placeholder="Price (Rate) in USD" step="0.01" min="0.01" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-bhandari-primary focus:border-bhandari-primary">
+                        <textarea name="desc" placeholder="Product Description" rows="2" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-bhandari-primary focus:border-bhandari-primary"></textarea>
+                        
+<input type="text" name="color" placeholder="Placeholder Color (HEX e.g., 4f46e5)" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-bhandari-primary focus:border-bhandari-primary">
+                        <input type="text" name="text" placeholder="Placeholder Text (e.g., New+Item)" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-bhandari-primary focus:border-bhandari-primary">
+                        
+                        <button type="submit" class="w-full py-3 text-lg font-semibold rounded-full text-white bg-bhandari-accent hover:bg-orange-600 transition duration-150 shadow-md active:scale-95">
+                            Add Product
+                        </button>
+                    </div>
+                </form>
+            `;
+        }
+
+        window.renderEditProductForm = function(productId) {
+            const product = getProductById(productId);
+            if (!product) {
+                showNotification("Error: Product not found!", 'error');
+                return;
+            }
+
+            const formHTML = `
+                <h3 class="text-xl font-bold mb-5 text-bhandari-primary">Edit Product Details & Price: ${product.name}</h3>
+                <form onsubmit="handleProductSubmit(event, 'edit', ${product.id})">
+                    <div class="space-y-4">
+                        <input type="text" name="name" value="${product.name}" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-bhandari-primary focus:border-bhandari-primary">
+                        <input type="text" name="category" value="${product.category}" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-bhandari-primary focus:border-bhandari-primary">
+                        <input type="number" name="price" value="${product.price.toFixed(2)}" step="0.01" min="0.01" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-bhandari-primary focus:border-bhandari-primary">
+                        <textarea name="desc" rows="2" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-bhandari-primary focus:border-bhandari-primary">${product.desc}</textarea>
+                        <input type="text" name="color" value="${product.color || ''}" placeholder="Placeholder Color (HEX)" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-bhandari-primary focus:border-bhandari-primary">
+                        <input type="text" name="text" value="${product.text || ''}" placeholder="Placeholder Text" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-bhandari-primary focus:border-bhandari-primary">
+                        
+                        <div class="flex space-x-3">
+                            <button type="button" onclick="renderAdminDashboard('products')" class="flex-1 py-3 text-lg font-semibold rounded-full text-gray-700 bg-gray-200 hover:bg-gray-300 transition duration-150 active:scale-95">
+                                Cancel Edit
+                            </button>
+                            <button type="submit" class="flex-1 py-3 text-lg font-semibold rounded-full text-white bg-bhandari-primary hover:bg-indigo-700 transition duration-150 shadow-md active:scale-95">
+                                Save Changes
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            `;
+            // Replace the Add Product form with the Edit form
+            document.getElementById('product-form-container').innerHTML = formHTML;
+        }
+
+        window.handleProductSubmit = function(event, type, productId = null) {
+            event.preventDefault();
+            const form = event.target;
+            const data = {
+                name: form.elements['name'].value,
+                category: form.elements['category'].value,
+                price: parseFloat(form.elements['price'].value),
+                desc: form.elements['desc'].value,
+                color: form.elements['color'].value.replace('#', ''), // Clean up hex
+                text: form.elements['text'].value.replace(/\s/g, '+') // URL encode spaces
+            };
+
+            if (data.price <= 0 || isNaN(data.price)) {
+                showNotification("Price must be a valid number greater than zero.", 'error');
+                return;
+            }
+
+            if (type === 'add') {
+                addProduct(data);
+                form.reset();
+            } else if (type === 'edit' && productId !== null) {
+                updateProduct(productId, data);
+                // After saving, return to the default Add form
+                document.getElementById('product-form-container').innerHTML = renderAddProductForm();
+            }
+        }
+
+
+        // --- SPA Routing Core ---
+
+        let currentPage = 'home';
+
+        window.renderPage = function(pageName) {
+            currentPage = pageName;
+            
+            // Reset active state on navigation buttons
+            document.querySelectorAll('.nav-link').forEach(btn => {
+                btn.classList.remove('text-bhandari-accent', 'font-bold');
+                if (btn.getAttribute('data-page') === pageName) {
+                    btn.classList.add('text-bhandari-accent', 'font-bold');
+                }
+            });
+            
+            // Execute the rendering function for the new page
+            switch (pageName) {
+                case 'products':
+                    renderProductsPage();
+                    break;
+                case 'cart':
+                    renderCartPage();
+                    break;
+                case 'checkout':
+                    renderCheckoutPage();
+                    break;
+                case 'admin':
+                    renderAdminLoginPage(); 
+                    break;
+                case 'home':
+                default:
+                    renderHomePage();
+                    break;
+            }
+
+            // Close mobile menu if open
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuOpenIcon = document.getElementById('menu-icon-open');
+            const menuCloseIcon = document.getElementById('menu-icon-close');
+            
+            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+                menuOpenIcon.classList.remove('hidden');
+                menuCloseIcon.classList.add('hidden');
+            }
+
+            // Scroll to the top of the main content
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+
+        // --- Mobile Menu Logic (reused from previous version) ---
+        const menuButton = document.getElementById('menu-button');
+        
+        if (menuButton) {
+            menuButton.addEventListener('click', () => {
+                const mobileMenu = document.getElementById('mobile-menu');
+                const menuOpenIcon = document.getElementById('menu-icon-open');
+                const menuCloseIcon = document.getElementById('menu-icon-close');
+
+                const isMenuOpen = mobileMenu.classList.toggle('hidden');
+                
+                // Toggle icons based on menu state
+                menuOpenIcon.classList.toggle('hidden', !isMenuOpen);
+                menuCloseIcon.classList.toggle('hidden', isMenuOpen);
+            });
+        }
+        
+        // --- Initialization on Load ---
+        function init() {
+            loadProducts();      // Load products (Crucial: must happen before cart)
+            loadCart();          // Load cart from storage
+            loadOrderHistory();  // Load past orders for admin view
+            renderPage('home');  // Start on the home page
+        }
+        
+        window.onload = init;
+    </script>
+</body>
+</html>
+
